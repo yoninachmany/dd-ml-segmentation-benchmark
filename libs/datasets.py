@@ -25,7 +25,7 @@ def download_dataset(dataset):
 
     if not os.path.exists(dataset):
         print(f'extracting "{filename}"')
-        os.system(f'tar -xvf {filename}')
+        os.system(f'tar -xvf {filename} --exclude="{dataset}/elevations"')
     else:
         print(f'folder "{dataset}" already exists, remove it if you want to re-create.')
 
