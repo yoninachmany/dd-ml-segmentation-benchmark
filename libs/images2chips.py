@@ -30,7 +30,7 @@ def image2tile(prefix, scene, dataset, orthofile, elevafile, labelfile, windowx=
     label = cv2.imread(labelfile)
 
     # Not using elevation in the sample - but useful to incorporate it ;)
-    eleva = cv2.imread(elevafile, -1)
+    # eleva = cv2.imread(elevafile, -1)
 
     assert(ortho.shape[0] == label.shape[0])
     assert(ortho.shape[1] == label.shape[1])
