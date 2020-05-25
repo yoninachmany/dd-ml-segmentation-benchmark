@@ -15,6 +15,11 @@ def download_dataset(dataset):
         sys.exit(0)
 
     filename = f'{dataset}.tar.gz'
+
+    dir = '/content/drive/My Drive/'
+    dataset = os.path.join(dir, dataset)
+    filename = os.path.join(dir, filename)
+
     url = URLS[dataset]
 
     if not os.path.exists(filename):
